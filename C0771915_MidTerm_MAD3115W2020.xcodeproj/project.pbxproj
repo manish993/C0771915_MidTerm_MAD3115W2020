@@ -14,6 +14,7 @@
 		9B656B8224106818004E43A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B656B8124106818004E43A4 /* Assets.xcassets */; };
 		9B656B8524106818004E43A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B656B8324106818004E43A4 /* LaunchScreen.storyboard */; };
 		9BCA14E52412FEA3009AAB92 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA14E42412FEA3009AAB92 /* CustomerListTableViewController.swift */; };
+		9BCA14E7241300B2009AAB92 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA14E6241300B2009AAB92 /* AddNewCustomerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B656B8424106818004E43A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B656B8624106818004E43A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BCA14E42412FEA3009AAB92 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
+		9BCA14E6241300B2009AAB92 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9B656B8324106818004E43A4 /* LaunchScreen.storyboard */,
 				9B656B8624106818004E43A4 /* Info.plist */,
 				9BCA14E42412FEA3009AAB92 /* CustomerListTableViewController.swift */,
+				9BCA14E6241300B2009AAB92 /* AddNewCustomerViewController.swift */,
 			);
 			path = C0771915_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				9B656B7D24106817004E43A4 /* loginViewController.swift in Sources */,
 				9BCA14E52412FEA3009AAB92 /* CustomerListTableViewController.swift in Sources */,
+				9BCA14E7241300B2009AAB92 /* AddNewCustomerViewController.swift in Sources */,
 				9B656B7924106817004E43A4 /* AppDelegate.swift in Sources */,
 				9B656B7B24106817004E43A4 /* SceneDelegate.swift in Sources */,
 			);

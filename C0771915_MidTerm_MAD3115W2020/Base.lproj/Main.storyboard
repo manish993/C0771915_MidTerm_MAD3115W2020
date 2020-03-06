@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--Customer List Table View Controller-->
+        <!--Customer-->
         <scene sceneID="K1i-mn-6Th">
             <objects>
                 <viewController id="WMK-Sv-xpS" customClass="CustomerListTableViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,14 +78,36 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kvD-US-K3z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="da3-hg-6T0">
+                    <navigationItem key="navigationItem" title="Customer" id="da3-hg-6T0">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="sjq-kk-jWH"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="pHM-ir-9Iv"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Customer" id="pHM-ir-9Iv">
+                            <connections>
+                                <segue destination="FbY-Nv-xKV" kind="show" id="gTG-D4-egn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwC-Kg-hre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="138.61607142857142"/>
+        </scene>
+        <!--Add New Customer View Controller-->
+        <scene sceneID="auA-mN-5LQ">
+            <objects>
+                <viewController id="FbY-Nv-xKV" customClass="AddNewCustomerViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ck1-gJ-5e9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kD6-pX-ic5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7r-OA-I4v">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ryq-Z2-Qqo"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNE-vn-TWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qq6-dt-zJ7">
