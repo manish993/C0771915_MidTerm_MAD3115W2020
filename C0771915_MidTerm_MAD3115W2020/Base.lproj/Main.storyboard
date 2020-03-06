@@ -75,7 +75,19 @@
                     <view key="view" contentMode="scaleToFill" id="Dem-wV-a7K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-VR-Cw2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HoF-VR-Cw2" firstAttribute="top" secondItem="kvD-US-K3z" secondAttribute="top" id="Dgb-Lp-clp"/>
+                            <constraint firstItem="kvD-US-K3z" firstAttribute="bottom" secondItem="HoF-VR-Cw2" secondAttribute="bottom" id="Gnc-7b-zIw"/>
+                            <constraint firstItem="kvD-US-K3z" firstAttribute="trailing" secondItem="HoF-VR-Cw2" secondAttribute="trailing" id="efd-B8-iRp"/>
+                            <constraint firstItem="HoF-VR-Cw2" firstAttribute="leading" secondItem="kvD-US-K3z" secondAttribute="leading" id="n9v-cr-KT8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kvD-US-K3z"/>
                     </view>
                     <navigationItem key="navigationItem" title="Customer" id="da3-hg-6T0">
