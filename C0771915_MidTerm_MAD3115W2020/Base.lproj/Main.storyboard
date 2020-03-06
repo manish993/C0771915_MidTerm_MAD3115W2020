@@ -79,17 +79,40 @@
                         <viewLayoutGuide key="safeArea" id="kvD-US-K3z"/>
                     </view>
                     <navigationItem key="navigationItem" title="Customer" id="da3-hg-6T0">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="sjq-kk-jWH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="sjq-kk-jWH">
+                            <connections>
+                                <segue destination="xXN-KS-o1x" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="vP5-Ma-9s8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Customer" id="pHM-ir-9Iv">
                             <connections>
-                                <segue destination="FbY-Nv-xKV" kind="show" id="gTG-D4-egn"/>
+                                <segue destination="hpd-Ev-T5P" kind="show" id="jT4-du-dnt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwC-Kg-hre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xXN-KS-o1x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="138.61607142857142"/>
+        </scene>
+        <!--New Customer-->
+        <scene sceneID="964-hh-Y69">
+            <objects>
+                <viewController id="hpd-Ev-T5P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQW-K6-rfy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NEE-04-4Wu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Customer" id="qqU-3c-olZ">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="aS4-fR-c10"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhP-Rj-KXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448" y="-305"/>
         </scene>
         <!--Bill Detail-->
         <scene sceneID="auA-mN-5LQ">
@@ -108,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNE-vn-TWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="138"/>
+            <point key="canvasLocation" x="2448" y="461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qq6-dt-zJ7">

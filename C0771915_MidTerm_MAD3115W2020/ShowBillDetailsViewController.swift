@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewCustomerViewController: UIViewController {
+class ShowBillDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,6 +18,9 @@ class loginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
+    {
+      print("Logout")
+    }
 }
 
