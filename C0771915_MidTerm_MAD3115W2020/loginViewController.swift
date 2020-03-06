@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class loginViewController: UIViewController {
 
+    @IBOutlet weak var textLogin: UITextField!
+    @IBOutlet weak var textPassword: UITextField!
+    @IBOutlet weak var SwitchrRemember: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
