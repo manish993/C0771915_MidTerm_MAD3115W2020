@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="138.61607142857142"/>
         </scene>
-        <!--Add New Customer View Controller-->
+        <!--Bill Detail-->
         <scene sceneID="auA-mN-5LQ">
             <objects>
                 <viewController id="FbY-Nv-xKV" customClass="AddNewCustomerViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,8 +101,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kD6-pX-ic5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j7r-OA-I4v">
+                    <navigationItem key="navigationItem" title="Bill Detail" id="j7r-OA-I4v">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ryq-Z2-Qqo"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Bill" id="DpK-UY-CE1"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNE-vn-TWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
