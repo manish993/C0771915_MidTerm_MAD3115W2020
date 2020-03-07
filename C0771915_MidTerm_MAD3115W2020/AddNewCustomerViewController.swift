@@ -67,12 +67,12 @@ class AddNewCustomerViewController: UIViewController {
         {
             DataStorage.getInstance().addCustomer(customer: Customer(customerID: id, firstName: firstName, lastName: lastName, emailID: email))
             
-        }
+       
         
         
         
        
-               let alertController = UIAlertController(title: " Customer Added", message:
+               let alertController = UIAlertController(title: "Customer Added", message:
                    "", preferredStyle: .alert)
               // alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
@@ -82,4 +82,5 @@ class AddNewCustomerViewController: UIViewController {
         
     }
     
+}
 }

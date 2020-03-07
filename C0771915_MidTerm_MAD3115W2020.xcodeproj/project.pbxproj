@@ -19,6 +19,7 @@
 		9BCA14EB24130AD6009AAB92 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA14EA24130AD6009AAB92 /* Customer.swift */; };
 		9BCA151124131F56009AAB92 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA151024131F56009AAB92 /* AddNewCustomerViewController.swift */; };
 		9BCA151324131F98009AAB92 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA151224131F98009AAB92 /* AddNewBillViewController.swift */; };
+		9BCA15152413306A009AAB92 /* stringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA15142413306A009AAB92 /* stringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9BCA14EA24130AD6009AAB92 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9BCA151024131F56009AAB92 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		9BCA151224131F98009AAB92 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
+		9BCA15142413306A009AAB92 /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9BCA14EA24130AD6009AAB92 /* Customer.swift */,
 				9BCA151024131F56009AAB92 /* AddNewCustomerViewController.swift */,
 				9BCA151224131F98009AAB92 /* AddNewBillViewController.swift */,
+				9BCA15142413306A009AAB92 /* stringExtension.swift */,
 			);
 			path = C0771915_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				9BCA14EB24130AD6009AAB92 /* Customer.swift in Sources */,
 				9BCA14E52412FEA3009AAB92 /* CustomerListTableViewController.swift in Sources */,
 				9BCA14E7241300B2009AAB92 /* ShowBillDetailsViewController.swift in Sources */,
+				9BCA15152413306A009AAB92 /* stringExtension.swift in Sources */,
 				9BCA14E92413091E009AAB92 /* DataStorage.swift in Sources */,
 				9BCA151124131F56009AAB92 /* AddNewCustomerViewController.swift in Sources */,
 				9B656B7924106817004E43A4 /* AppDelegate.swift in Sources */,

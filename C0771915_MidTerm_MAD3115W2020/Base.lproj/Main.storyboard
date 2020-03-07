@@ -34,14 +34,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trq-t2-qC6">
-                                <rect key="frame" x="186" y="371" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="WMK-Sv-xpS" kind="show" id="MuI-fP-adM"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-Ok-DSw">
                                 <rect key="frame" x="268" y="424" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,6 +45,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trq-t2-qC6">
+                                <rect key="frame" x="200" y="361" width="38" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAf-dv-aDG"/>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWn-kO-gpR"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evI-6e-lLR"/>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQ6-fC-ltq"/>
+                                    <segue destination="WMK-Sv-xpS" kind="show" id="0wb-ck-w5b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,8 +70,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="nmg-bL-AQp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="807" y="139"/>
+            <point key="canvasLocation" x="805.79710144927537" y="138.61607142857142"/>
         </scene>
         <!--Customer-->
         <scene sceneID="K1i-mn-6Th">
@@ -108,7 +113,7 @@
                     <navigationItem key="navigationItem" title="Customer" id="da3-hg-6T0">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="sjq-kk-jWH">
                             <connections>
-                                <segue destination="xXN-KS-o1x" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="vP5-Ma-9s8"/>
+                                <segue destination="nmg-bL-AQp" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="eOx-Wd-Odh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Customer" id="pHM-ir-9Iv">
@@ -119,7 +124,6 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwC-Kg-hre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="xXN-KS-o1x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1513" y="139"/>
         </scene>
