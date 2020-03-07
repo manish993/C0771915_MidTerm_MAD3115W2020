@@ -65,11 +65,12 @@ class AddNewCustomerViewController: UIViewController {
         }
         else
         {
+            DataStorage.getInstance().addCustomer(customer: Customer(customerID: id, firstName: firstName, lastName: lastName, emailID: email))
             
         }
         
         
-        DataStorage.getInstance().addCustomer(customer: Customer(customerID: id, firstName: firstName, lastName: lastName, emailID: email))
+        
        
                let alertController = UIAlertController(title: " Customer Added", message:
                    "", preferredStyle: .alert)
