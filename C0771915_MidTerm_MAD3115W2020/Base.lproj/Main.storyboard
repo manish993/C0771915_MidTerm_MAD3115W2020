@@ -50,10 +50,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAf-dv-aDG"/>
-                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWn-kO-gpR"/>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evI-6e-lLR"/>
-                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQ6-fC-ltq"/>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiO-sa-5CH"/>
                                     <segue destination="WMK-Sv-xpS" kind="show" id="0wb-ck-w5b"/>
                                 </connections>
                             </button>
@@ -63,8 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Tb-Xp-2xx"/>
                     <connections>
-                        <outlet property="SwitchrRemember" destination="1tc-Ok-DSw" id="Tte-4E-C4y"/>
-                        <outlet property="switchState" destination="1tc-Ok-DSw" id="mRj-Dt-PxB"/>
+                        <outlet property="SwitchrRemember" destination="1tc-Ok-DSw" id="8Ge-2A-iJ6"/>
                         <outlet property="textLogin" destination="byp-UB-UXV" id="y5x-9G-LbB"/>
                         <outlet property="textPassword" destination="wQ1-Aa-d0T" id="b3R-QV-iPB"/>
                     </connections>
@@ -99,6 +95,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WMK-Sv-xpS" id="deg-vd-DDj"/>
+                                    <outlet property="delegate" destination="WMK-Sv-xpS" id="caU-sS-wKO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -113,7 +113,7 @@
                     <navigationItem key="navigationItem" title="Customer" id="da3-hg-6T0">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="sjq-kk-jWH">
                             <connections>
-                                <segue destination="nmg-bL-AQp" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="eOx-Wd-Odh"/>
+                                <segue destination="nmg-bL-AQp" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="pZM-4q-61a"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Customer" id="pHM-ir-9Iv">
@@ -122,6 +122,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="customerTableView" destination="HoF-VR-Cw2" id="20X-b7-C3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwC-Kg-hre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

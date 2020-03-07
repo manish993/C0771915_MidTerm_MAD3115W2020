@@ -16,124 +16,89 @@ class loginViewController: UIViewController {
     @IBOutlet weak var textLogin: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     @IBOutlet weak var SwitchrRemember: UISwitch!
-    @IBOutlet weak var switchState: UISwitch!
-      let email = "manishpawar@gmail.com"
-        let password = "123"
+    
+      
             override func viewDidLoad() {
         super.viewDidLoad()
              // Do any additional setup after loading the view.
     
                 
-      
-      
-      
-      
-          self.navigationItem.title = "Login"
-          
-          
- 
-        let ud = UserDefaults.standard
-            let e = ud.string(forKey: "email")
-            let p = ud.string(forKey: "password")
-         
-            if let em = e {
-                textLogin.text = "\(em)"
-            }
+}
+
+    func rememberMeSwitchValue()
+    {
+        let userDefault = UserDefaults.standard
+        
+        if let userName = userDefault.string(forKey: "emailId")
+        {
+            textLogin.text = userName
             
-            if let pa = p {
-                textPassword.text = "\(pa)"
+            if let pwd = userDefault.string(forKey: "password")
+            {
+                textPassword.text = pwd
             }
-            
         }
-    
+    }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-    
-    
-    
-
-       
             
-            do{
-                try login()
-                if textLogin.text == email && textPassword.text == password{
-                    if SwitchrRemember.isOn == true {
-                        UserDefaults.standard.set(textLogin.text!, forKey: "email")
-                        UserDefaults.standard.set(textPassword.text!, forKey: "password")
-                    }
-                    else {
-                        UserDefaults.standard.removeObject(forKey: "email")
-                        UserDefaults.standard.removeObject(forKey: "password")
-                        textLogin.text = ""
-                        textPassword.text = ""
-                    }
-                    performSegue(withIdentifier: "segue", sender: self)
+            if (textLogin.text == "" || textPassword.text == "")
+            {
+                let alert = UIAlertController(title: "Alert", message: "EmailID or password is empty", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Continue", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert,animated: true)
+            }
+            else if(textLogin.text == "manish" && textPassword.text == "pawar"
+            )
+            {
+                
+                let userDefault = UserDefaults.standard
+                if SwitchrRemember.isOn
+                {
+                    
+                    userDefault.setValue(textLogin.text, forKey: "emailId")
+                    userDefault.set(textPassword.text, forKey: "password")
                 }
-                else{
-                    let alertController = UIAlertController(title: "ERROR", message:
-                        "Access Denied", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-                    self.present(alertController, animated: true, completion: nil)
+                else
+                {
+                    userDefault.removeObject(forKey: "userEmail")
+                    userDefault.removeObject(forKey: "userPassword")
                 }
                 
-            }catch LoginError.incomplete{
-                let alertController = UIAlertController(title: "ERROR", message:
-                    "Incomplete Form", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-                self.present(alertController, animated: true, completion: nil)
             }
-            catch  LoginError.emailError{
-                let alertController = UIAlertController(title: "ERROR", message:
-                    "Invalid Email", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-                self.present(alertController, animated: true, completion: nil)
-            }catch LoginError.passwordError {
-                let alertController = UIAlertController(title: "ERROR", message:
-                    "Invalid Password", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-                self.present(alertController, animated: true, completion: nil)
+            else
+            {
+                let alert = UIAlertController(title: "Invalid User", message: "Incorrect EmailID or password!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true)
             }
-            catch {
-                print("Unrecognized error")
-            }
-        }
-    
-    }
-    
-        func login() throws{
-            let email = textLogin.text!
-            let pass = textPassword.text!
-
-            if email.isEmpty || pass.isEmpty {
-                throw LoginError.incomplete
-            }
-            if !email.isValidEmail{
-                throw LoginError.emailError
-            }
-            if pass.count < 8 {
-                throw LoginError.passwordError
-            }
-
-        }
         
 
 
 
+        }
+        
+        
+        @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
+        {
+          print("Logout")
 
+        }
+       
+        
+        
+
+
+    }
+
+
+
+
+
+   
   
-     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
-     {
-        print("Logout")
-        
-    }
-        
-        
-
-    
     
                 
     
