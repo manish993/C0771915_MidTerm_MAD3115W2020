@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+            <point key="canvasLocation" x="807" y="139"/>
         </scene>
         <!--Customer-->
         <scene sceneID="K1i-mn-6Th">
@@ -121,7 +121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwC-Kg-hre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xXN-KS-o1x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1684.057971014493" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1513" y="139"/>
         </scene>
         <!--New Customer-->
         <scene sceneID="964-hh-Y69">
@@ -160,8 +160,18 @@
                         <viewLayoutGuide key="safeArea" id="NEE-04-4Wu"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Customer" id="qqU-3c-olZ">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="aS4-fR-c10"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="aS4-fR-c10">
+                            <connections>
+                                <action selector="addcustomers:" destination="hpd-Ev-T5P" id="di1-1j-EUo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="f7q-8x-41T" id="SZB-Vg-Ucy"/>
+                        <outlet property="fname" destination="X2U-Dg-aqu" id="1Mm-Uk-Ov2"/>
+                        <outlet property="id" destination="Isw-Yp-Gro" id="IZg-sy-hjf"/>
+                        <outlet property="lname" destination="Fsw-UH-cCV" id="pfz-Tm-ilr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhP-Rj-KXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +234,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yF4-gm-Lwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="120" y="139"/>
         </scene>
     </scenes>
 </document>

@@ -36,7 +36,6 @@ import Foundation
                 customerList.updateValue(Customer(customerID: "C05", firstName: "Avani", lastName: "Patel", emailID: "avi_pt@gmail.com"), forKey: "C05")
                 
                 
-                
             }
             
         }

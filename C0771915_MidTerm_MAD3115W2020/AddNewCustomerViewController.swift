@@ -10,21 +10,34 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
 
+    @IBOutlet weak var id: UITextField!
+    @IBOutlet weak var fname: UITextField!
+    @IBOutlet weak var lname: UITextField!
+    @IBOutlet weak var email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func addcustomers(_ sender: Any) {
+        
+        let id = self.id.text!
+        let firstName = self.fname.text!
+        let lastName = self.lname.text!
+       // var name = firstName + lastName
+        let email = self.email.text!
+        
+        DataStorage.getInstance().addCustomer(customer: Customer(customerID: id, firstName: firstName, lastName: lastName, emailID: email))
+       
+               let alertController = UIAlertController(title: " Customer Added", message:
+                   "", preferredStyle: .alert)
+              // alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+               self.present(alertController, animated: true, completion: nil)
+               
+           
+        
     }
-    */
-
+    
 }
