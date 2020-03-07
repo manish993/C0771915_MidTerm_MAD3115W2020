@@ -179,12 +179,34 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bill Detail" id="j7r-OA-I4v">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ryq-Z2-Qqo"/>
-                        <barButtonItem key="rightBarButtonItem" title="New Bill" id="DpK-UY-CE1"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Bill" id="DpK-UY-CE1">
+                            <connections>
+                                <segue destination="2aW-xW-VxR" kind="show" id="63H-ea-gLx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNE-vn-TWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2448" y="461"/>
+        </scene>
+        <!--New Bill-->
+        <scene sceneID="aaO-Mc-n98">
+            <objects>
+                <viewController id="2aW-xW-VxR" customClass="AddNewBillViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gc3-sT-nl6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KEU-GR-CIP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Bill" id="2vZ-yR-Lhe">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="pNF-4C-20Y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkn-ec-phj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3101" y="462"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qq6-dt-zJ7">
