@@ -12,7 +12,8 @@ case emailError, passwordError, incomplete
 }
 
 class loginViewController: UIViewController {
-
+    @IBOutlet weak var btnLogin: UIButton!
+    
     @IBOutlet weak var textLogin: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     @IBOutlet weak var SwitchrRemember: UISwitch!
@@ -20,6 +21,7 @@ class loginViewController: UIViewController {
       
             override func viewDidLoad() {
         super.viewDidLoad()
+                rememberMeSwitchValue()
              // Do any additional setup after loading the view.
     
                 
