@@ -253,7 +253,6 @@
                         <viewLayoutGuide key="safeArea" id="kD6-pX-ic5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bill Detail" id="j7r-OA-I4v">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="ryq-Z2-Qqo"/>
                         <barButtonItem key="rightBarButtonItem" title="New Bill" id="DpK-UY-CE1">
                             <connections>
                                 <segue destination="2aW-xW-VxR" kind="show" id="63H-ea-gLx"/>
