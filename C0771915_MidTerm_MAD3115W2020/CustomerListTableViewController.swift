@@ -14,12 +14,16 @@ class CustomerListTableViewController: UIViewController {
  var customers:[Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-}
+        customers = DataStorage.getInstance().getAllCustomers()
+            }
+        }
+            
+
         //self.navigationController?.hidesBarsOnTap = true
         //Hide Back Button from navigation Bar
         
 
-}
+
 extension CustomerListTableViewController: UITableViewDataSource,UITableViewDelegate
    {
        

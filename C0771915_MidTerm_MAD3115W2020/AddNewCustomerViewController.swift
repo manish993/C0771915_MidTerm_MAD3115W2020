@@ -20,9 +20,11 @@ class AddNewCustomerViewController: UIViewController {
     }
     
 
-    @IBAction func addcustomers(_ sender: Any) {
-        
-        let id = self.id.text!
+   
+    @IBAction func addcustomers(_ sender: UIBarButtonItem) {
+    
+    
+    let id = self.id.text!
         let firstName = self.fname.text!
         let lastName = self.lname.text!
        // var name = firstName + lastName
@@ -74,7 +76,7 @@ class AddNewCustomerViewController: UIViewController {
        
                let alertController = UIAlertController(title: "Customer Added", message:
                    "", preferredStyle: .alert)
-              // alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
 
                self.present(alertController, animated: true, completion: nil)
                
