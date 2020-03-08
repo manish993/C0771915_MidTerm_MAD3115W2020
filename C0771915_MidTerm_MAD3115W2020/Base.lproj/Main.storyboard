@@ -22,7 +22,7 @@
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byp-UB-UXV">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byp-UB-UXV">
                                 <rect key="frame" x="111" y="197" width="206" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.71429247799420914" green="1" blue="0.89735238239062598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HoF-VR-Cw2" firstAttribute="top" secondItem="kvD-US-K3z" secondAttribute="top" id="Dgb-Lp-clp"/>
                             <constraint firstItem="kvD-US-K3z" firstAttribute="bottom" secondItem="HoF-VR-Cw2" secondAttribute="bottom" id="Gnc-7b-zIw"/>
@@ -163,7 +163,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.7487008505285635" green="1" blue="0.8573106391904789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="NEE-04-4Wu"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Customer" id="qqU-3c-olZ">
@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="2447.826086956522" y="-305.35714285714283"/>
         </scene>
-        <!--Bill details-->
+        <!--Customer Details-->
         <scene sceneID="auA-mN-5LQ">
             <objects>
-                <viewController storyboardIdentifier="custDetailsVC" title="Bill details" id="FbY-Nv-xKV" customClass="ShowBillDetailsViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="custDetailsVC" title="Customer Details" id="FbY-Nv-xKV" customClass="ShowBillDetailsViewController" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ck1-gJ-5e9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.71421947977438716" green="0.98039215690000003" blue="0.90890468762116894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kD6-pX-ic5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bill Detail" id="j7r-OA-I4v">
@@ -284,7 +284,7 @@
                     <view key="view" contentMode="scaleToFill" id="gc3-sT-nl6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.71925381063084126" green="1" blue="0.85468820765489095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="KEU-GR-CIP"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Bill" id="2vZ-yR-Lhe">

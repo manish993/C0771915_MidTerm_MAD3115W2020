@@ -30,11 +30,11 @@ import Foundation
         }
         func loadData()
         {
-            customerList.updateValue(Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jonsnow@gmail.com"), forKey: "C001")
-            customerList.updateValue(Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansa@gmail.com"), forKey: "C002")
-            customerList.updateValue(Customer(customerID: "C003", firstName: "Joffery", lastName: "Batatheon", emailID: "joffery@gmail.com"), forKey: "C003")
-            customerList.updateValue(Customer(customerID: "C004", firstName: "Ned", lastName: "Mormont", emailID: "ned@gmail.com"), forKey: "C004")
-            customerList.updateValue(Customer(customerID: "C005", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com"), forKey: "C005")
+            customerList.updateValue(Customer(customerID: "C001", firstName: "Manish", lastName: "Pawar", emailID: "manishpawar@gmail.com"), forKey: "C001")
+            customerList.updateValue(Customer(customerID: "C002", firstName: "Rajesh", lastName: "kumar", emailID: "rajeshkumar@gmail.com"), forKey: "C002")
+            customerList.updateValue(Customer(customerID: "C003", firstName: "Rakesh", lastName: "kumar", emailID: "rakeshkumar@gmail.com"), forKey: "C003")
+            customerList.updateValue(Customer(customerID: "C004", firstName: "Aditya", lastName: "sai", emailID: "adityasai@gmail.com"), forKey: "C004")
+            customerList.updateValue(Customer(customerID: "C005", firstName: "Charmi", lastName: "patel", emailID: "charmiapatel@gmail.com"), forKey: "C005")
             
         }
         

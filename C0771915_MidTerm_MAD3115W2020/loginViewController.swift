@@ -51,7 +51,7 @@ class loginViewController: UIViewController {
                 alert.addAction(action)
                 self.present(alert,animated: true)
             }
-            else if(textLogin.text == "manish" && textPassword.text == "pawar"
+            else if(textLogin.text == "manishpawar@gmail.com" && textPassword.text == "pawar"
             )
             {
                 
