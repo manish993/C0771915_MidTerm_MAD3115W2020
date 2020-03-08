@@ -18,7 +18,7 @@ class ShowBillDetailsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "Customer Details"
         self.custId.text = customers?.customerID
         self.Fname.text = customers?.firstName
         self.Lname.text = customers?.lastName
