@@ -7,3 +7,15 @@
 //
 
 import Foundation
+class Internet: Bill
+  {
+  private var providerName: String
+  private var gbUsed: Double
+
+init(billId: String, billDate: Date, billType: BillType, providerName:String, gbUsed: Double)
+  {
+    self.providerName = providerName
+    self.gbUsed = gbUsed
+    super.init(billId: billId, billDate: billDate, billType: billType)
+    self.billTotal = billCalculate()
+  }
