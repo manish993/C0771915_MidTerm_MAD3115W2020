@@ -22,6 +22,7 @@
 		9BCA15152413306A009AAB92 /* stringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA15142413306A009AAB92 /* stringExtension.swift */; };
 		9BED59912418265C00E71180 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED59902418265C00E71180 /* Bill.swift */; };
 		9BED59932418271300E71180 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED59922418271300E71180 /* Hydro.swift */; };
+		9BED59952418298F00E71180 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED59942418298F00E71180 /* Internet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9BCA15142413306A009AAB92 /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
 		9BED59902418265C00E71180 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BED59922418271300E71180 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		9BED59942418298F00E71180 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				9BCA15142413306A009AAB92 /* stringExtension.swift */,
 				9BED59902418265C00E71180 /* Bill.swift */,
 				9BED59922418271300E71180 /* Hydro.swift */,
+				9BED59942418298F00E71180 /* Internet.swift */,
 			);
 			path = C0771915_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				9BCA151124131F56009AAB92 /* AddNewCustomerViewController.swift in Sources */,
 				9B656B7924106817004E43A4 /* AppDelegate.swift in Sources */,
 				9BCA151324131F98009AAB92 /* AddNewBillViewController.swift in Sources */,
+				9BED59952418298F00E71180 /* Internet.swift in Sources */,
 				9B656B7B24106817004E43A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

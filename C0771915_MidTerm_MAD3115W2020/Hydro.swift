@@ -20,7 +20,7 @@ private var unitsUsed: Double = 0.0
   self.billTotal = billCalculate()
 }
 
-//------- METHOD TO CALCULATE TOTAL HYDRO BILL -------
+
 func billCalculate() -> Double
 {
     var billAmount = 0.0
