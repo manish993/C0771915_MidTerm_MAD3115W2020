@@ -17,14 +17,25 @@ class ShowBillDetailsViewController: UIViewController
     @IBOutlet weak var email: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.billDetailsButton()
         self.navigationItem.title = "Customer Details"
         self.custId.text = customers?.customerID
         self.Fname.text = customers?.firstName
         self.Lname.text = customers?.lastName
         self.email.text = customers?.emailID
 }
-    
+    private func billDetailsButton()
+       {
+           let billDetails = UIBarButtonItem(title: "Bill Details", style: .plain, target: self, action: #selector(self.details))
+           self.navigationItem.rightBarButtonItem = billDetails
+       }
+       
+       @objc func details()
+       {
+           let sb = UIStoryboard(name: "Main", bundle: nil)
+           let bills = sb.instantiateViewController(identifier: "bills") as! billsViewController
+           navigationController?.pushViewController(bills, animated: true)
+       }
 
   
 
