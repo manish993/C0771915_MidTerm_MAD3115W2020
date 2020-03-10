@@ -19,3 +19,15 @@ init(billId: String, billDate: Date, billType: BillType, providerName:String, gb
     super.init(billId: billId, billDate: billDate, billType: billType)
     self.billTotal = billCalculate()
   }
+func billCalculate() -> Double{
+       var billAmount = 0.0
+    if( gbUsed < 10){
+        billAmount = 3 * gbUsed
+    }
+    else {
+        billAmount = 3.5 * gbUsed
+    }
+       return billAmount
+   }
+
+}
