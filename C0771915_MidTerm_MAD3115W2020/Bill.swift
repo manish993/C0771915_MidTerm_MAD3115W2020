@@ -7,14 +7,19 @@
 //
 
 import Foundation
+enum BillType {
+    case MOBILE, INTERNET, HYDRO, INSURANCE
+}
+
 class Bill
 {
     var billId:String
     var billDate:Date
-    var billType:String
+    var billType:BillType
+    var billTotal : Double = 0
   //  var totalBill:Int
     
-    init(billId:String,billDate:Date,billType:String)
+    init(billId:String,billDate:Date,billType:BillType)
     {
     self.billId=billId
     self.billDate=billDate

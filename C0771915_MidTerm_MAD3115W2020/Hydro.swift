@@ -23,7 +23,7 @@ private var unitsUsed: Double = 0.0
 //------- METHOD TO CALCULATE TOTAL HYDRO BILL -------
 func billCalculate() -> Double
 {
-       var billAmount = 0.0
+    var billAmount = 0.0
     if (unitsUsed < 10)
     {
         billAmount = 1.5 * unitsUsed
@@ -32,6 +32,6 @@ func billCalculate() -> Double
     {
         billAmount = 2 * unitsUsed
     }
-return billAmount
+    return billAmount
   }
 }
