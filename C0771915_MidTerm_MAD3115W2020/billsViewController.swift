@@ -17,7 +17,7 @@ class billsViewController: UIViewController {
         super.viewDidLoad()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
-        self.bills = customerBill.getBills()
+    //self.bills = customerBill!.getBills()
         
 
         // Do any additional setup after loading the view.
@@ -39,39 +39,4 @@ class billsViewController: UIViewController {
 
    
 }
-extension billsViewController: UITableViewDataSource, UITableViewDelegate
-{
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return self.bills.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell") as! BillCell
-        let billList = bills[indexPath.row]
-        if billList.billId.contains("M"){
-        cell.lblbillId?.text = billList.billId
-        cell.lblbillDate?.text = billList.billDate.getFormattedDate()
-        cell.imgBillicon.image = UIImage(named:"mobileicon")
-        //cell.lblbillType?.text = billList.MOBILE
-            cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
-        }
-        if billList.billId.contains("HY")
-        {
-        cell.lblbillId?.text = billList.billId
-        cell.lblbillDate?.text = billList.billDate.getFormattedDate()
-        cell.imgBillicon.image = UIImage(named:"hydroicon")
-        cell.backgroundColor = UIColor(displayP3Red: 0.91, green: 1.0, blue: 1.0, alpha: 1.0)
-        }
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(150.0)
-    }
-     
-}
+
