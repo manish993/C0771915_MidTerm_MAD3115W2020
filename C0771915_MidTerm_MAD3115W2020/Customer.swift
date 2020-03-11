@@ -32,21 +32,15 @@ class Customer
           customerBills.updateValue(bill, forKey: billId)
         }
     
-    func allBillsTotal() -> Double
-    {
-      var allTotal2 = 0.0
-      for i in customerBills{
-        allTotal2 += i.value.billTotal
-      }
-      return allTotal2
-    }
-    
-    func getBills() -> [Bill]{
-        var bills = [Bill]()
-        for i in customerBills{
-            bills.append(i.value)
-        }
-        return bills
-    }
+   func removeBill(bill: Bill, billID: String)
+   {
+       customerBills.removeValue(forKey: billID)
+       
+   }
+   func calculateTotalBill() {
+       for i in customerBills {
+           totalBillToPay = totalBillToPay + i.value.billTotal
+       }
+   }
     
 }

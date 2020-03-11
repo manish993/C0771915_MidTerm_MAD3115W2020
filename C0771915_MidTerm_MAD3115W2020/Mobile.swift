@@ -29,6 +29,6 @@ class Mobile: Bill
     
     override func calculateTotalBill()
     {
-        self.billAmount = internetGBUsed*ratePerGB + Double(minuteUsed)*ratePerMinute
+        self.billTotal = internetGBUsed*ratePerGB + Double(minuteUsed)*ratePerMinute
     }
 }

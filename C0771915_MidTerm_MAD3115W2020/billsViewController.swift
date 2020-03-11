@@ -9,7 +9,7 @@
 import UIKit
 
 class billsViewController: UIViewController {
-     var customerBill: Customer?
+     //var customerBill: Customer?
        var bills = [Bill]()
 
     @IBOutlet weak var tblBill: UITableView!

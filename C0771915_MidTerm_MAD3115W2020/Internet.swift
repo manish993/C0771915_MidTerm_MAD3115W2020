@@ -11,23 +11,15 @@ class Internet: Bill
   {
   private var providerName: String
   private var gbUsed: Double
-
+    var ratePerGB: Double = 6.8
 init(billId: String, billDate: Date, billType: BillType, providerName:String, gbUsed: Double)
   {
     self.providerName = providerName
     self.gbUsed = gbUsed
     super.init(billId: billId, billDate: billDate, billType: billType)
-    self.billTotal = billCalculate()
+    
   }
-func billCalculate() -> Double{
-       var billAmount = 0.0
-    if( gbUsed < 10){
-        billAmount = 3 * gbUsed
-    }
-    else {
-        billAmount = 3.5 * gbUsed
-    }
-       return billAmount
-   }
-
-}
+    override func calculateTotalBill()
+    {
+    self.billTotal = gbUsed*ratePerGB
+    }}
