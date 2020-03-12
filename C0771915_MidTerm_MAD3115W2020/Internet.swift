@@ -17,9 +17,11 @@ init(billId: String, billDate: String, billType: BillType, providerName:String, 
     self.providerName = providerName
     self.gbUsed = gbUsed
     super.init(billId: billId, billDate: billDate, billType: billType)
+    self.totalBill = calculateTotalBill()
     
   }
-    override func calculateTotalBill()
+    override func calculateTotalBill() -> Double
     {
     self.billTotal = gbUsed*ratePerGB
+        return billTotal
     }}

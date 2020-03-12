@@ -22,7 +22,7 @@ var ratePerUnit: Double = 10.0
     override func calculateTotalBill() -> Double {
         
         
-            self.totalBill = unitsUsed * ratePerUnit
+        self.totalBill = unitsUsed * ratePerUnit
         return totalBill
     }
     }
