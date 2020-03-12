@@ -10,9 +10,30 @@ import UIKit
 
 class AddNewBillViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var agency: UITextField!
+    @IBOutlet weak var netProvider: UITextField!
+    @IBOutlet weak var billId: UITextField!
+    @IBOutlet weak var billDate: UITextField!
+    @IBOutlet var billType: UIView!
+    @IBOutlet weak var unitsUsed: UITextField!
+    @IBOutlet weak var gbUsed: UITextField!
+    
+     
+       var c :Customer?
+       var h : Hydro?
+       var i : Internet?
+       var m : Mobile?
+       
+           override func viewDidLoad() {
         super.viewDidLoad()
-
+            datePicker.isHidden = true
+           
+            gbUsed.isHidden = true
+            unitsUsed.isHidden = true
+            netProvider.isHidden = true
+            agency.isHidden = true
+           // txtFeild5.isHidden = true
         // Do any additional setup after loading the view.
     }
     

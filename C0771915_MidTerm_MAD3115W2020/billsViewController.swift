@@ -15,13 +15,13 @@ class billsViewController: UIViewController {
     @IBOutlet weak var tblBill: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bills = customer!.customerBills
+        self.bills = customer!.getAllbills()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
-    //self.bills = customerBill!.getBills()
+   
         
 
-        // Do any additional setup after loading the view.
+        
     }
     private func newBillButton()
     {
@@ -50,14 +50,20 @@ extension billsViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell", for: indexPath) as! BillTableViewCell
         let bill = bills[indexPath.row]
-        
-        return cell!
+        if bill.billType == .HYDRO
+        {
+           // cell.billId.text = " Bill Id : \(bill.BillId)"
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let b = bills[indexPath.row]
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(150.0)
     }
     
 }

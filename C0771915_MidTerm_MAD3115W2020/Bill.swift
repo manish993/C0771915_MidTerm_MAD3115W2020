@@ -8,21 +8,21 @@
 
 import Foundation
 enum BillType {
-    case MOBILE, INTERNET, HYDRO, INSURANCE
+    case MOBILE, INTERNET, HYDRO
 }
 
 class Bill
 {
     var billId:String
-    var billDate:Date
+    var billDate:String
     var billType:BillType
     var billTotal : Double = 0
    var totalBill:Int = 0
     
-    init(billId:String,billDate:Date,billType:BillType)
+    init(billId:String,billDate:String,billType:BillType)
     {
     self.billId=billId
-    self.billDate=billDate
+    self.billDate = billDate
     self.billType=billType
     }
     func calculateTotalBill() {

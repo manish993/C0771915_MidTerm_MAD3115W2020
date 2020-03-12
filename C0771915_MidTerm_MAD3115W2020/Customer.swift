@@ -27,6 +27,15 @@ class Customer
       self.lastName=lastName
       self.emailID=emailID//.isValidEmail(email: emailID)
     }
+    func getAllbills() -> [Bill]
+    {
+        var allBills = [Bill] ()
+        for bill in customerBills {
+            allBills.append(bill.value)
+        }
+        return allBills
+        
+    }
     func newBill(bill: Bill, billId: String)
         {
           customerBills.updateValue(bill, forKey: billId)

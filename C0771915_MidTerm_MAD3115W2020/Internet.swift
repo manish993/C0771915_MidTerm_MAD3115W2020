@@ -12,7 +12,7 @@ class Internet: Bill
   private var providerName: String
   private var gbUsed: Double
     var ratePerGB: Double = 6.8
-init(billId: String, billDate: Date, billType: BillType, providerName:String, gbUsed: Double)
+init(billId: String, billDate: String, billType: BillType, providerName:String, gbUsed: Double)
   {
     self.providerName = providerName
     self.gbUsed = gbUsed
