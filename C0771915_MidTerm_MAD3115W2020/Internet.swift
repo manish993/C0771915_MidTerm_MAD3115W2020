@@ -24,4 +24,6 @@ init(billId: String, billDate: String, billType: BillType, providerName:String, 
     {
     self.billTotal = gbUsed*ratePerGB
         return billTotal
-    }}
+    }
+    
+}
