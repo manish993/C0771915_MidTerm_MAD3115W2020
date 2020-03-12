@@ -279,7 +279,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BillTableViewCell" rowHeight="166" id="UlL-XA-Ziz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BillTableViewCell" rowHeight="166" id="UlL-XA-Ziz" customClass="BillTableViewCell" customModule="C0771915_MidTerm_MAD3115W2020" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="166"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UlL-XA-Ziz" id="bhA-xX-41A">
@@ -309,6 +309,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="billDate" destination="iFb-bH-3dA" id="c5S-yy-BVe"/>
+                                            <outlet property="billId" destination="lHq-a2-N7g" id="ApL-H9-8Il"/>
+                                            <outlet property="billType" destination="SYb-6T-bJD" id="lLl-lr-eZy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

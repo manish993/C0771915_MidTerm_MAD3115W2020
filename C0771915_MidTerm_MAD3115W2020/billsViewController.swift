@@ -15,7 +15,7 @@ class billsViewController: UIViewController {
     @IBOutlet weak var tblBill: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bills = customer!.getAllbills()
+       // self.bills = customer!.getAllbills()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
    
@@ -52,18 +52,44 @@ extension billsViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell", for: indexPath) as! BillTableViewCell
         let bill = bills[indexPath.row]
+        
         if bill.billType == .HYDRO
         {
-           // cell.billId.text = " Bill Id : \(bill.BillId)"
+
+           cell.billId.text = " Bill Id: \(bill.billId)"
+            cell.billDate.text = " Bill Date: \(bill.billDate)"
+         cell.billType.text = " Bill Amount: \(bill.totalBill)"
         }
+        else if bill.billType == .INTERNET
+        {
+
+            cell.billId.text = " Bill Id: \(bill.billId)"
+            cell.billDate.text = " Bill Date: \(bill.billDate)"
+            cell.billType.text = " Bill Amount: \(bill.totalBill)"
+        }
+        else if bill.billType == .MOBILE
+        {
+           cell.billId.text = " Bill Id: \(bill.billId)"
+           cell.billDate.text = " Bill Date: \(bill.billDate)"
+            cell.billType.text = " Bill Amount: \(bill.totalBill)"
+        }
+            
+        else
+        {
+           
+        }
+
+        
+        
+       
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let b = bills[indexPath.row]
+       // let b = bills[indexPath.row]
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(150.0)
+        return CGFloat(168.0)
     }
     
 }
