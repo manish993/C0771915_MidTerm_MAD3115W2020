@@ -10,28 +10,22 @@ import Foundation
 class Hydro: Bill
 {
 private var agencyName: String = ""
-private var unitsUsed: Double = 0.0
+private var unitsUsed: Double
 var ratePerUnit: Double = 10.0
   init(billId: String, billDate: String, billType: BillType, agencyName:String, unitsUsed: Double)
 {
   self.agencyName = agencyName
   self.unitsUsed = unitsUsed
   super.init(billId: billId, billDate: billDate, billType: billType)
-  self.billTotal = billCalculate()
+  self.billTotal = calculateTotalBill()
 }
+    override func calculateTotalBill() -> Double {
+        
+        
+            self.totalBill = unitsUsed * ratePerUnit
+        return totalBill
+    }
+    }
 
 
-func billCalculate() -> Double
-{
-    var billAmount = 0.0
-    if (unitsUsed < 10)
-    {
-        billAmount = 1.5 * unitsUsed
-    }
-    else
-    {
-        billAmount = 2 * unitsUsed
-    }
-    return billAmount
-  }
-}
+

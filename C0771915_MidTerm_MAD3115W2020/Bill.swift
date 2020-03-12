@@ -17,7 +17,7 @@ class Bill
     var billDate:String
     var billType:BillType
     var billTotal : Double = 0
-   var totalBill:Int = 0
+   var totalBill:Double = 0
     
     init(billId:String,billDate:String,billType:BillType)
     {
