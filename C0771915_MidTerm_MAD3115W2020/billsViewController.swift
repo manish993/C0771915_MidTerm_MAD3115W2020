@@ -10,11 +10,12 @@ import UIKit
 
 class billsViewController: UIViewController {
      //var customerBill: Customer?
-       var bills = [Bill]()
-
+    var bills : [Bill] = []
+    var customer : Customer?
     @IBOutlet weak var tblBill: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bills = customer!.customerBills
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
     //self.bills = customerBill!.getBills()
