@@ -34,7 +34,9 @@ class ShowBillDetailsViewController: UIViewController
        {
            let sb = UIStoryboard(name: "Main", bundle: nil)
            let bills = sb.instantiateViewController(identifier: "bills") as! billsViewController
+        bills.customer=self.customers
            navigationController?.pushViewController(bills, animated: true)
+           
        }
 
   
