@@ -15,7 +15,7 @@ class billsViewController: UIViewController {
     @IBOutlet weak var tblBill: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.bills = customer!.getAllbills()
+       self.bills = customer!.getAllbills()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
    
