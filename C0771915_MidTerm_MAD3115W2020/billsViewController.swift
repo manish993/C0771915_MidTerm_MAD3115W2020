@@ -13,9 +13,11 @@ class billsViewController: UIViewController {
     var bills : [Bill] = []
     var customer : Customer?
     @IBOutlet weak var tblBill: UITableView!
+    @IBOutlet weak var totalBill: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.bills = customer!.getAllbills()
+        
+        self.bills = customer!.getAllbills()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
    

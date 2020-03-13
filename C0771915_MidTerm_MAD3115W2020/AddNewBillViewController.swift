@@ -8,44 +8,48 @@
 
 import UIKit
 
-class AddNewBillViewController: UIViewController {
+class AddNewBillViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    
+    
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var agency: UITextField!
     @IBOutlet weak var netProvider: UITextField!
     @IBOutlet weak var billId: UITextField!
     @IBOutlet weak var billDate: UITextField!
-    @IBOutlet var billType: UIView!
+    
     @IBOutlet weak var unitsUsed: UITextField!
     @IBOutlet weak var gbUsed: UITextField!
     
-     
-       var c :Customer?
-       var h : Hydro?
-       var i : Internet?
-       var m : Mobile?
+    @IBOutlet weak var billType: UIPickerView!
+    var pickerData:[String] = [String]()
+    
+       
        
            override func viewDidLoad() {
         super.viewDidLoad()
-            datePicker.isHidden = true
-           
-            gbUsed.isHidden = true
-            unitsUsed.isHidden = true
-            netProvider.isHidden = true
-            agency.isHidden = true
-           // txtFeild5.isHidden = true
-        // Do any additional setup after loading the view.
+//            pickerData = ["Hydro","Internet","Mobile"]
+//            datePicker.isHidden = true
+//            gbUsed.isHidden = true
+//            unitsUsed.isHidden = true
+//            netProvider.isHidden = true
+//            agency.isHidden = true
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
