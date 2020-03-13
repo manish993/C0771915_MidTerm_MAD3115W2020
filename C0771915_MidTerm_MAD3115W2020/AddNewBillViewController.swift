@@ -42,8 +42,32 @@ class AddNewBillViewController: UIViewController {
 
    
     @IBAction func biils(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
         
+        {
+        case 0:
+            netProvider.isHidden  = true
+           // txtMobilePlan.isHidden = true
+            gbUsed.isHidden = true
+            mobileNumber.isHidden = true
+           manufacturer.isHidden = true
+            minutes.isHidden  = true
+            break
+            
+        case 1:
+            agency.isHidden = true
+            unitsUsed.isHidden = true
+            //netProvider.isHidden = true
         
+        case 2:
+             mobileNumber.isHidden = true
+             manufacturer.isHidden = true
+             minutes.isHidden  = true
+            agency.isHidden = true
+            unitsUsed.isHidden = true
+        default:
+            print("hello")
+        }
     }
     
 }
