@@ -26,27 +26,45 @@ class AddNewBillViewController: UIViewController {
     @IBOutlet weak var manufacturer: UITextField!
     
     @IBOutlet weak var mobileNumber: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    
     
     
        
        
            override func viewDidLoad() {
         super.viewDidLoad()
-            
+            createDatePicker()
             
             
         
     }
     
+    @IBAction func saveBills(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "", message:
+             "Bill Added", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
 
-   
+         self.present(alertController, animated: true, completion: nil)    }
+    
+    
+    func createDatePicker(){
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(AddNewBillViewController.dateChanged(datePicker:)), for: .valueChanged)
+        billDate.inputView = datePicker
+        
+    }
+     @objc func dateChanged(datePicker: UIDatePicker){
+           
+        billDate.text = datePicker.date.formatDate()
+        
+       }
     @IBAction func biils(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
         
         {
         case 0:
-            netProvider.isHidden  = true
+            netProvider.isHidden = true
            // txtMobilePlan.isHidden = true
             gbUsed.isHidden = true
             mobileNumber.isHidden = true
