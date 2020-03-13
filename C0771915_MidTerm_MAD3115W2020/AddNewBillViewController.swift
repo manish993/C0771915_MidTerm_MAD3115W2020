@@ -28,6 +28,9 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
     var datePicker: UIDatePicker!
     @IBOutlet weak var mobileNumber: UITextField!
     
+    @IBOutlet weak var mobilePlan: UITextField!
+    
+    @IBOutlet weak var netGb: UITextField!
     
     
        
@@ -83,11 +86,25 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func saveBills(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "", message:
-             "Bill Added", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-
-         self.present(alertController, animated: true, completion: nil)    }
+        if billType.selectedSegmentIndex == 0
+            {
+                let tempBillObj = Hydro(billId: billId.text!, billDate: (billDate.text!), billType: BillType.HYDRO, agencyName: agency.text!, unitsUsed: Double(Int(unitsUsed.text!) ?? Int(0.0)))
+                customer?.newBill(bill: tempBillObj, billId: billId.text!)
+            }
+            else if billType.selectedSegmentIndex == 1
+            {
+//                let tempBillObj = Internet(billId: billId.text!, billDate: (billDate.text!), billType: .INTERNET, providerName: netProvider.text!, gbUsed: Double(IntgbUsed!.text)
+            }
+            
+            
+        
+            
+        }
+//        let alertController = UIAlertController(title: "", message:
+//             "Bill Added", preferredStyle: .alert)
+//        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+//
+//         self.present(alertController, animated: true, completion: nil)    }
     
 
    
@@ -100,11 +117,12 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
                 minutes.isHidden = true
                 mobileNumber.isHidden = true
                 gbUsed.isHidden = true
-               // mobilePlan.isHidden = true
+               mobilePlan.isHidden = true
                 netProvider.isHidden = true
-                agency.isHidden = true
-                
+               agency.isHidden = true
+                mobilePlan.isHidden = true
                 unitsUsed.isHidden = false
+                netGb.isHidden = true
             }
             else if sender.selectedSegmentIndex == 1
             
@@ -113,12 +131,13 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
                 billDate.isHidden = false
                  manufacturer.isHidden = true
                  minutes.isHidden = true
-                mobileNumber.isHidden = true
+               mobileNumber.isHidden = true
                  gbUsed.isHidden = true
-                 //txtMobilePlan.isHidden = true
+                 mobilePlan.isHidden = true
                  netProvider.isHidden = false
                  agency.isHidden = true
                  unitsUsed.isHidden = true
+                netGb.isHidden = true
                 
             }
             else if sender.selectedSegmentIndex == 2
@@ -129,11 +148,11 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
                  minutes.isHidden = false
                 mobileNumber.isHidden = false
                  gbUsed.isHidden = false
-                 //MobilePlan.isHidden = false
+                 mobilePlan.isHidden = false
                  netProvider.isHidden = true
-                 
                  agency.isHidden = true
                  unitsUsed.isHidden = true
+                netGb.isHidden = true
             }
             
         }

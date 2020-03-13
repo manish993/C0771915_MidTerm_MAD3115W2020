@@ -410,8 +410,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Hydro"/>
-                                    <segment title="Mobile"/>
                                     <segment title="Internet"/>
+                                    <segment title="Mobile"/>
                                 </segments>
                                 <connections>
                                     <action selector="biils:" destination="2aW-xW-VxR" eventType="valueChanged" id="grC-TC-qx5"/>
@@ -425,6 +425,18 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9q-BC-sh8">
                                 <rect key="frame" x="51" y="454" width="230" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile plan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rC6-r7-8Zf">
+                                <rect key="frame" x="51" y="489" width="230" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Internet gb used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-wN-CPb">
+                                <rect key="frame" x="51" y="524" width="230" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -451,13 +463,15 @@
                         <outlet property="manufacturer" destination="sLM-ua-3Cw" id="BC6-aQ-8Mh"/>
                         <outlet property="minutes" destination="zrF-HP-mhu" id="Zmm-SN-SiI"/>
                         <outlet property="mobileNumber" destination="n9q-BC-sh8" id="66j-6C-Y7K"/>
+                        <outlet property="mobilePlan" destination="rC6-r7-8Zf" id="2re-dw-aMD"/>
+                        <outlet property="netGb" destination="Un3-wN-CPb" id="vI7-3U-fi0"/>
                         <outlet property="netProvider" destination="JTr-c7-Ku6" id="HEE-0A-Pvj"/>
                         <outlet property="unitsUsed" destination="alc-KD-nd8" id="bZw-Kt-Hy9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkn-ec-phj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676.811594202899" y="430.58035714285711"/>
+            <point key="canvasLocation" x="3706" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qq6-dt-zJ7">
