@@ -8,18 +8,8 @@
 
 import UIKit
 
-class AddNewBillViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int
-    {
-        return 1
-    }
+class AddNewBillViewController: UIViewController {
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
     
     
     
@@ -33,8 +23,8 @@ class AddNewBillViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
     @IBOutlet weak var unitsUsed: UITextField!
     @IBOutlet weak var gbUsed: UITextField!
     
-    @IBOutlet weak var billType: UIPickerView!
-    var pickerData:[String] = [String]()
+    
+    
     
        
        
@@ -54,5 +44,8 @@ class AddNewBillViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
     
 
    
-
+    @IBAction func biils(_ sender: UISegmentedControl) {
+        
+    }
+    
 }

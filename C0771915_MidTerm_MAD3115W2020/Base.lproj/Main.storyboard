@@ -293,15 +293,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-6T-bJD">
-                                                    <rect key="frame" x="56" y="122" width="288" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-bH-3dA">
+                                                    <rect key="frame" x="56" y="73" width="288" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-bH-3dA">
-                                                    <rect key="frame" x="56" y="73" width="288" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-6T-bJD">
+                                                    <rect key="frame" x="56" y="122" width="288" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -396,16 +396,24 @@
                                 <rect key="frame" x="0.0" y="618" width="414" height="125"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uci-pZ-05a">
-                                <rect key="frame" x="20" y="751" width="374" height="129"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-HP-mhu">
                                 <rect key="frame" x="51" y="561" width="230" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W5r-XQ-zxd">
+                                <rect key="frame" x="106" y="61" width="208" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Hydro"/>
+                                    <segment title="Mobile"/>
+                                    <segment title="Internet"/>
+                                </segments>
+                                <connections>
+                                    <action selector="biils:" destination="2aW-xW-VxR" eventType="valueChanged" id="grC-TC-qx5"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.71925381063084126" green="1" blue="0.85468820765489095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="KEU-GR-CIP"/>
@@ -417,7 +425,6 @@
                         <outlet property="agency" destination="n6T-v9-NPJ" id="I1F-Du-G7y"/>
                         <outlet property="billDate" destination="6kW-V3-fiD" id="FlI-rr-mgP"/>
                         <outlet property="billId" destination="JzM-b5-WHL" id="nig-Jx-7fc"/>
-                        <outlet property="billType" destination="Uci-pZ-05a" id="K3g-73-ppr"/>
                         <outlet property="datePicker" destination="dLL-O6-Vam" id="Rnw-Hh-F4q"/>
                         <outlet property="gbUsed" destination="0Zz-hz-R1O" id="pXi-QA-vVJ"/>
                         <outlet property="netProvider" destination="JTr-c7-Ku6" id="HEE-0A-Pvj"/>
