@@ -26,6 +26,7 @@ class Customer
       self.firstName=firstName
       self.lastName=lastName
       self.emailID=emailID//.isValidEmail(email: emailID)
+        self.totalBillToPay = calculateTotalBill()
     }
     func getAllbills() -> [Bill]
     {
@@ -46,10 +47,11 @@ class Customer
        customerBills.removeValue(forKey: billID)
        
    }
-   func calculateTotalBill() {
+   func calculateTotalBill() -> Double{
        for i in customerBills {
-           totalBillToPay = totalBillToPay + i.value.billTotal
+            totalBillToPay = totalBillToPay + i.value.billTotal
        }
+    return totalBillToPay
    }
     
 }

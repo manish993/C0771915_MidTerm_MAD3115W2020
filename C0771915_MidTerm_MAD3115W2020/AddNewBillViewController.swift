@@ -40,6 +40,9 @@ class AddNewBillViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
        
            override func viewDidLoad() {
         super.viewDidLoad()
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = .date
+            
 //            pickerData = ["Hydro","Internet","Mobile"]
 //            datePicker.isHidden = true
 //            gbUsed.isHidden = true

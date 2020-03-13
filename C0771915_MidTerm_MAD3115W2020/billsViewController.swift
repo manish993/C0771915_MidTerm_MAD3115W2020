@@ -20,8 +20,9 @@ class billsViewController: UIViewController {
         self.bills = customer!.getAllbills()
         self.newBillButton()
         self.navigationItem.title = "Bill Details"
-   
-        
+        self.totalBill.text = "Total Bill:$"
+        self.totalBill.text = "Total Bill $\(customer!.calculateTotalBill())"
+
 
         
     }
