@@ -47,7 +47,8 @@ import Foundation
         {
            
             c1.newBill(bill: m1, billId: m1.billId)
-            c1.newBill(bill: m2, billId: m2.billId)
+            c1.newBill(bill: i2, billId: m2.billId)
+            c1.newBill(bill: h1, billId: h1.billId)
             c2.newBill(bill: h1, billId: h1.billId)
             c3.newBill(bill: h2, billId: h2.billId)
             c3.newBill(bill: i1, billId: i1.billId)
