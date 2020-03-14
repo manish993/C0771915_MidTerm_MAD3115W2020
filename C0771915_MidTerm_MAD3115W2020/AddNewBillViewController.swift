@@ -48,20 +48,20 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
     }
     func pickUpDate(_ textField: UITextField)
     {
-      //Date Picker
+     
       self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
       self.datePicker.backgroundColor = UIColor.white
       self.datePicker.datePickerMode = UIDatePicker.Mode.date
       textField.inputView = self.datePicker
        
-      //Toolbar
+      
       let toolBar = UIToolbar()
       toolBar.barStyle = .default
       toolBar.isTranslucent = true
       toolBar.tintColor = .red
       toolBar.sizeToFit()
        
-      //Adding Button Toolbar
+    
       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewBillViewController.doneClick))
       let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
       let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewBillViewController.cancelClick))
@@ -70,7 +70,8 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
       textField.inputAccessoryView = toolBar
     }
      
-    //Button Done and Cancel
+   
+
     @objc func doneClick()
     {
       let dateformatter1 = DateFormatter()
