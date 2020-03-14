@@ -143,6 +143,7 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
               {
                  let addBillObj = Hydro(billId: billId.text!, billDate: (billDate.text!), billType: BillType.HYDRO, agencyName: agency.text!, unitsUsed: Double(unitsUsed.text!)!)
                  customer?.newBill(bill: addBillObj, billId: billId.text!)
+                print("hello")
               }
               else if billType.selectedSegmentIndex == 1
               {
