@@ -449,7 +449,7 @@
                     <navigationItem key="navigationItem" title="New Bill" id="2vZ-yR-Lhe">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="pNF-4C-20Y">
                             <connections>
-                                <action selector="saveBills:" destination="2aW-xW-VxR" id="flr-3A-QMm"/>
+                                <action selector="saveButton:" destination="2aW-xW-VxR" id="CLH-Vd-5r7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -85,29 +85,8 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
       billDate.resignFirstResponder()
     }
     
-    @IBAction func saveBills(_ sender: UIBarButtonItem) {
-        if billType.selectedSegmentIndex == 0
-            {
-                let tempBillObj = Hydro(billId: billId.text!, billDate: (billDate.text!), billType: BillType.HYDRO, agencyName: agency.text!, unitsUsed: Double(Int(unitsUsed.text!) ?? Int(0.0)))
-                customer?.newBill(bill: tempBillObj, billId: billId.text!)
-            }
-            else if billType.selectedSegmentIndex == 1
-            {
-//                let tempBillObj = Internet(billId: billId.text!, billDate: (billDate.text!), billType: .INTERNET, providerName: netProvider.text!, gbUsed: Double(IntgbUsed!.text)
-            }
-            
-            
-        
-            
-        }
-//        let alertController = UIAlertController(title: "", message:
-//             "Bill Added", preferredStyle: .alert)
-//        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-//
-//         self.present(alertController, animated: true, completion: nil)    }
     
 
-   
     @IBAction func biils(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0
             {
@@ -119,9 +98,9 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
                 gbUsed.isHidden = true
                mobilePlan.isHidden = true
                 netProvider.isHidden = true
-               agency.isHidden = true
+               agency.isHidden = false
                 mobilePlan.isHidden = true
-                unitsUsed.isHidden = false
+               unitsUsed.isHidden = false
                 netGb.isHidden = true
             }
             else if sender.selectedSegmentIndex == 1
@@ -129,15 +108,15 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
             {
                 billId.isHidden = false
                 billDate.isHidden = false
-                 manufacturer.isHidden = true
-                 minutes.isHidden = true
-               mobileNumber.isHidden = true
-                 gbUsed.isHidden = true
-                 mobilePlan.isHidden = true
+                manufacturer.isHidden = true
+              minutes.isHidden = true
+              mobileNumber.isHidden = true
+                gbUsed.isHidden = true
+                mobilePlan.isHidden = true
                  netProvider.isHidden = false
                  agency.isHidden = true
                  unitsUsed.isHidden = true
-                netGb.isHidden = true
+                netGb.isHidden = false
                 
             }
             else if sender.selectedSegmentIndex == 2
@@ -156,4 +135,33 @@ class AddNewBillViewController: UIViewController , UITextFieldDelegate{
             }
             
         }
-}
+
+    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        
+        if billType.selectedSegmentIndex == 0
+              {
+                 let addBillObj = Hydro(billId: billId.text!, billDate: (billDate.text!), billType: BillType.HYDRO, agencyName: agency.text!, unitsUsed: Double(unitsUsed.text!)!)
+                 customer?.newBill(bill: addBillObj, billId: billId.text!)
+              }
+              else if billType.selectedSegmentIndex == 1
+              {
+                  let addBillObj = Internet(billId: billId.text!, billDate: (billDate.text!)
+                    , billType: BillType.INTERNET, providerName: netProvider.text!, gbUsed: Double(netGb.text!)!)
+                  
+                  customer?.newBill(bill:addBillObj, billId: billId.text!)
+              }
+              else if billType.selectedSegmentIndex == 2
+              
+              {
+                  let addBillobj = Mobile(billID: billId.text!, billDate: (billDate.text!), billType: BillType.MOBILE, mobileManufacturerName: manufacturer.text!, planName: mobilePlan.text!, mobileNumber: mobileNumber.text!, internetGBUsed: Double(gbUsed.text!)!, minuteUsed: Int(minutes.text!)!)
+                  
+                 customer?.newBill(bill: addBillobj, billId: billId.text!)
+              }
+              
+              let sb = UIStoryboard(name: "Main", bundle: nil)
+              let DetailedBillVC = sb.instantiateViewController(identifier: "DetailedBillVC") as billsViewController
+              DetailedBillVC.customer = self.customer
+              navigationController?.pushViewController(DetailedBillVC, animated: true)
+          }
+}    
+
